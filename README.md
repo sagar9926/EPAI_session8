@@ -1,6 +1,6 @@
 # Created By : Sagar Agrawal
 
-# EPAI : Session 7
+# EPAI : Session 8
 
 ### Question 1 : Write a closure that takes a function and then check whether the function passed has a docstring with more than 50 characters. 50 is stored as a free variable
 
