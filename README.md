@@ -120,3 +120,9 @@ def counter_dict(times_dict):
     return inner
 ```
 
+References : 
+
+1).TSAI
+
+2). Closure introduction : http://zetcode.com/python/python-closures/#:~:text=A%20closure%20is%20a%20nested,free%20variable%20in%20outer%20scope
+             
