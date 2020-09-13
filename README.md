@@ -2,6 +2,46 @@
 
 # EPAI : Session 8
 
+## Closures : 
+
+__A closure is a nested function which has access to a free variable from an enclosing function that has finished its execution. Three characteristics of a Python closure are:__
+
+* it is a nested function
+* it has access to a free variable in outer scope
+* it is returned from the enclosing function
+
+__*A free variable is a variable that is not bound in the local scope. In order for closures to work with immutable variables such as numbers and strings, we have to use the nonlocal keyword.*__
+
+## Python simple closure example:
+```
+def make_printer(msg):
+
+    msg = "hi there"
+
+    def printer():
+        print(msg)
+
+    return printer
+
+
+myprinter = make_printer("Hello there")
+myprinter()
+myprinter()
+myprinter()
+
+```
+__In the example, we have a make_printer() function, which creates and returns a function. The nested printer() function is the closure.__
+```
+myprinter = make_printer("Hello there")
+```
+__The make_printer() function returns a printer() function and assigns it to the myprinter variable. At this moment, it has finished its execution. However, the printer() closure still has access to the msg variable.__
+```
+## Output:
+hi there
+hi there
+hi there
+```
+
 ### Question 1 : Write a closure that takes a function and then check whether the function passed has a docstring with more than 50 characters. 50 is stored as a free variable
 
 ```
